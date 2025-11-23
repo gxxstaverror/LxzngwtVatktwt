@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frase — Tela Preta</title>
+  <style>
+    :root{
+      --bg:#000;
+      --text:#ffffff;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:3rem;
+      box-sizing:border-box;
+    }
+    .quote{
+      color:var(--text);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight:700; /* bold */
+      font-size:clamp(1.5rem, 4.5vw, 3.5rem);
+      line-height:1.15;
+      text-align:center;
+      max-width:1000px;
+      letter-spacing:0.02em;
+      text-transform:none;
+      transform:translateZ(0);
+    }
+    .quote:hover{ opacity:0.95; }
+    @media (max-width:420px){
+      .quote{ font-size:clamp(1.2rem,6vw,1.8rem); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="quote">E o primeiro passo para um longo caminho mas que ao longo do tempo todos se esquecem</div>
+  </div>
+</body>
+</html>

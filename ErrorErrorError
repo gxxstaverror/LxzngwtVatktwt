@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glitch Site</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background: black;
+        color: white;
+        font-family: 'Merriweather', serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .texto-central {
+        font-size: 2rem;
+        text-align: center;
+        z-index: 2;
+        padding: 20px;
+        max-width: 800px;
+    }
+
+    /* Palavras ao redor com glitch */
+    .glitch {
+        position: absolute;
+        font-size: 0.8rem;
+        opacity: 0.3;
+        color: #ff0000;
+        animation: glitch 1.5s infinite;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    @keyframes glitch {
+        0% { transform: translate(0,0); opacity: 0.2; }
+        20% { transform: translate(-2px,1px); opacity: 0.4; }
+        40% { transform: translate(2px,-1px); opacity: 0.3; }
+        60% { transform: translate(-1px,2px); opacity: 0.5; }
+        80% { transform: translate(1px,-2px); opacity: 0.4; }
+        100% { transform: translate(0,0); opacity: 0.2; }
+    }
+
+    /* Posições das palavras */
+    .g1 { top: 5%; left: 10%; }
+    .g2 { top: 10%; right: 15%; }
+    .g3 { bottom: 8%; left: 12%; }
+    .g4 { bottom: 5%; right: 10%; }
+    .g5 { left: 2%; top: 50%; transform: rotate(-90deg); }
+    .g6 { right: 2%; top: 50%; transform: rotate(90deg); }
+
+</style>
+</head>
+
+<body>
+
+<div class="texto-central">
+    <strong>É azul mas pode ser verde, tem um tom amarelado mas toca no vermelho, existe grama mas também água, é bonito mas também é bugado</strong>
+</div>
+
+<div class="glitch g1">confidencial error</div>
+<div class="glitch g2">error confidencial</div>
+<div class="glitch g3">confidencial error</div>
+<div class="glitch g4">error confidencial</div>
+<div class="glitch g5">confidencial • error • confidencial</div>
+<div class="glitch g6">error • confidencial • error</div>
+
+</body>
+</html>

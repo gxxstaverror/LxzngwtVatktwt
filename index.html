@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RGB Pulsando</title>
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+    text-align:center;
+}
+
+h1{
+    font-size:3rem;
+    font-weight:bold;
+    line-height:1.4;
+    animation:pulse 2s infinite ease-in-out;
+}
+
+.rgb{
+    background:linear-gradient(
+        90deg,
+        #00aaff,
+        #ff3333,
+        #ffd700,
+        #00ff66,
+        #00aaff
+    );
+    background-size:400% 100%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:rgbmove 4s linear infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+        text-shadow:0 0 10px rgba(255,255,255,.3);
+    }
+    50%{
+        transform:scale(1.08);
+        text-shadow:
+            0 0 15px #00aaff,
+            0 0 25px #ff3333,
+            0 0 35px #ffd700,
+            0 0 45px #00ff66;
+    }
+}
+
+@keyframes rgbmove{
+    0%{background-position:0% 50%;}
+    100%{background-position:400% 50%;}
+}
+</style>
+</head>
+<body>
+    <h1 class="rgb">
+        Azul, vermelho, amarelo e verde,<br>
+        se vista do jeito certo é bem mais visível
+    </h1>
+</body>
+</html>
